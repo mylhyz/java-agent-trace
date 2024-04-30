@@ -11,7 +11,7 @@ public class Agent {
      */
     public static void premain(String args, Instrumentation instrumentation) {
         // Instrumentation 用于修改字节码
-        ClassLoggerTransformer transformer = new ClassLoggerTransformer();
+        RuntimeTransformer transformer = new RuntimeTransformer();
         instrumentation.addTransformer(transformer);
     }
 
